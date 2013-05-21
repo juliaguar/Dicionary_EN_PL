@@ -5,8 +5,12 @@ class Word < ActiveRecord::Base
 	  if search
 	    find(:all, :conditions => ['english LIKE ? OR polish LIKE ?', "%#{search}%", "%#{search}%"])
 	  else
-	    find(:all)
+	    []
 	  end
+	end
+
+	def self.show()
+		find(:all)
 	end
 
 end

@@ -2,7 +2,7 @@ class WordsController < ApplicationController
   # GET /words
   # GET /words.json
   def index
-    @words = Word.search(params[:search])
+    @words = Word.show()
 
     respond_to do |format|
       format.html # index.html.erb

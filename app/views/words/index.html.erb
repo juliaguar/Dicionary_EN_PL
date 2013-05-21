@@ -1,12 +1,5 @@
 <h1>all entries</h1>
 
-<%= form_tag words_path, :method => 'get' do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
-  </p>
-<% end %>
-
 <table>
   <tr>
     <th>English</th>
@@ -29,4 +22,4 @@
 
 <br />
 
-<p>Didn't find what you are looking for? - Add <%= link_to 'New Word', new_word_path %></p>
+<p>Didn't find what you are looking for? - Add <%= link_to 'new word', new_word_path %></p>
