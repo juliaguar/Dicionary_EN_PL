@@ -12,7 +12,7 @@
  *= require_tree .
  */
 
-body { padding-top: 100px; }
+body { padding: 100px; }
 
 footer { margin-top: 100px; }
 
@@ -23,3 +23,8 @@ table, td, th {
 
 th { border-bottom: 1px solid #DDD !important; }
 table { width: 45% !important; }
+
+.container {
+	margin: 0px 100px;
+}
+

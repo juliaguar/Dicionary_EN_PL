@@ -1,15 +1,15 @@
 <h1>english polish <br> dictionary</h1>
 
 <%= form_tag "/", :method => 'get' do %>
-  <p>
     <input class='typeahead' id='search' name='search' type='text' value="<%= params[:search] %>" autocomplete="off"  data-provide="typeahead">
-    <%= submit_tag "Search", :name => nil %>
-  </p>
+    <input type="submit" value="Search" class="btn">
 <% end %>
 
 <% if params[:search] and @words.length == 0 then %>
 	<p> Sorry, we couldn't find <i><%= params[:search] %></i> </p> 
-	<p> Add <%= link_to params[:search], new_word_path %>?</p>
+  <p> Do you want to <br>
+    <li class="error_suggestion"> Look for <i><%= params[:search] %></i> on Google Translate: <i><%= params[:search] %> </i>is <%= link_to "english", ("http://translate.google.com/#en/pl/" + params[:search])  %> or <%= link_to "polish", ("http://translate.google.com/#pl/en/" + params[:search])  %>?</li><br>
+    <li class="error_suggestion"> Add <i><%= params[:search] %></i> to <%= link_to 'dictionary', new_word_path %>?</li></p>
 <% end %>
 
 <% if @words.length > 0 then %>
