@@ -2,7 +2,7 @@
 
 <%= form_tag "/", :method => 'get' do %>
   <p>
-    <%= text_field_tag :search, params[:search] %>
+    <input class='typeahead' id='search' name='search' type='text' value="<%= params[:search] %>" autocomplete="off"  data-provide="typeahead">
     <%= submit_tag "Search", :name => nil %>
   </p>
 <% end %>
