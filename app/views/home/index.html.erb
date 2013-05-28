@@ -8,7 +8,7 @@
 <% if params[:search] and @words.length == 0 then %>
 	<p> Sorry, we couldn't find <i><%= params[:search] %></i> </p> 
   <p> Do you want to <br>
-    <li class="error_suggestion"> Look for <i><%= params[:search] %></i> on Google Translate: <i><%= params[:search] %> </i>is <%= link_to "english", ("http://translate.google.com/#en/pl/" + params[:search])  %> or <%= link_to "polish", ("http://translate.google.com/#pl/en/" + params[:search])  %>?</li><br>
+    <li class="error_suggestion"> Look for <i><%= params[:search] %></i> on Google Translate: <i><%= params[:search] %> </i>is <%= link_to "English", ("http://translate.google.com/#en/pl/" + params[:search])  %> or <%= link_to "Polish", ("http://translate.google.com/#pl/en/" + params[:search])  %>?</li><br>
     <li class="error_suggestion"> Add <i><%= params[:search] %></i> to <%= link_to 'dictionary', new_word_path %>?</li></p>
 <% end %>
 
