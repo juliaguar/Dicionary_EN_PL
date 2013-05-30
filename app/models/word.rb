@@ -1,5 +1,7 @@
 class Word < ActiveRecord::Base
   attr_accessible :english, :polish
+  validates :english, :presence => true
+  validates :polish, :presence => true
 
 	def self.search(search)
 	  if search
